@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink text-slate-200 font-sans antialiased;
+}
+
+/* Strata divider used between sections */
+.strata {
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    #1c2940 0px,
+    #1c2940 14px,
+    #243453 14px,
+    #243453 28px
+  );
+  opacity: 0.6;
+}
+
+.section-pad {
+  @apply max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28;
+}
+
+.eyebrow {
+  @apply text-amber-glow text-xs font-semibold tracking-[0.25em] uppercase mb-3;
+}
+
+.h2 {
+  @apply text-3xl sm:text-4xl font-extrabold text-white leading-tight;
+}
+
+.card {
+  @apply bg-slab border border-steel rounded-2xl p-6 transition-colors;
+}
+
+/* nice custom range slider */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: #243453;
+  outline: none;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffb627;
+  cursor: pointer;
+  border: 3px solid #0a0f1a;
+  box-shadow: 0 0 0 1px #ffb627;
+}
+input[type='range']::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffb627;
+  cursor: pointer;
+  border: 3px solid #0a0f1a;
+}
